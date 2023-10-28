@@ -1,0 +1,23 @@
+.section-subtitle {
+  font-weight: 400;
+  line-height: 58px;
+  font-size: 50px;
+  letter-spacing: -2px;
+}
+
+
+@media (max-width: 1210px) {
+  .section-subtitle {
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+}
+
+@media (max-width: 720px) {
+.section-subtitle {
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+}

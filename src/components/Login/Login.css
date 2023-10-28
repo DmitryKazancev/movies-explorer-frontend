@@ -1,0 +1,20 @@
+.login {
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+.login__error {
+  margin-top: 21.7vh;
+}
+
+@media (max-width: 1210px) {
+  .login__error {
+    margin-top: 20.2vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .login__error {
+    margin-top: 31vh;
+  }
+}

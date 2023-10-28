@@ -1,0 +1,24 @@
+.cards-add {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-add__button {
+  width: 320px;
+  display: block;
+  margin: 50px auto 80px;
+  padding: 11px 60px 9px;
+  border: none;
+  border-radius: 6px;
+  background-color: #F4F4F4;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 720px) {
+  .cards-add__button {
+    width: 240px;
+  }
+}
