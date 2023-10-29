@@ -1,0 +1,110 @@
+.sign-with-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 396px;
+  height: 100vh;
+}
+
+.sign-with-form__logo {
+  margin-top: 10vh;
+}
+
+.sign-with-form__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 40px 0;
+}
+
+.sign-with-form__error {
+  display: block;
+  visibility: hidden;
+  color: #FF004C;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  min-height: 14px;
+}
+
+.sign-with-form__error_active {
+  visibility: visible;
+}
+
+.sign-with-form__submit {
+  background-color: #3456F3;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 13px 0 16px;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.sign-with-form__submit_inactive {
+  color: #fff;
+  background-color: #3456F3;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.2;
+}
+
+.sign-with-form__question {
+  margin-top: 16px;
+  color: #A0A0A0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.sign-with-form__link {
+  color: #3456F3;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: opacity 0.5s ease;
+}
+
+.sign-with-form__link:hover {
+  opacity: 0.6;
+}
+
+
+@media (max-width: 1210px) {
+  .sign-with-form__logo {
+    margin-top: 22.6vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .sign-with-form {
+    max-width: 260px;
+    align-items: center;
+  }
+
+  .sign-with-form__logo {
+    margin-top: 7.2vh;
+  }
+
+  .sign-with-form__title {
+    margin: 50px 0 80px;
+  }
+
+  .sign-with-form__submit {
+    font-size: 12px;
+  }
+
+  .sign-with-form__question {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+}

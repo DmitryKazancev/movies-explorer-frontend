@@ -1,0 +1,39 @@
+.auth__menu {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.auth__link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+.auth__login-button {
+  color: #fff;
+  background-color: #3456f3;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+@media (max-width: 720px) {
+  .auth__menu {
+    column-gap: 14px;
+  }
+
+  .auth__link {
+    font-size: 10px;
+  }
+
+  .auth__login-button {
+    padding: 5px 12px;
+  }
+}

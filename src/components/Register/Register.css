@@ -1,0 +1,20 @@
+.register {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.register__error {
+  margin-top: 13vh;
+}
+
+@media (max-width: 1210px) {
+  .register__error {
+    margin-top: 11.4vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .register__error {
+    margin-top: 22.6vh;
+  }
+}

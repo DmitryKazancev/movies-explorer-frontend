@@ -1,0 +1,8 @@
+.movies {
+  display: flex;
+  flex-direction: column;
+}
+
+.movies__header {
+  background-color: #fafafa;
+}
