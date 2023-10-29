@@ -8,39 +8,27 @@ export default function Portfolio() {
         <h4 className="portfolio__title">Портфолио</h4>
         <ul className="portfolio__list">
           <li className="portfolio__item">
-            <Link address="https://github.com/DmitryKazancev/how-to-learn"
-              sectionClass="portfolio__link portfolio__link_type_text"
+          <Link address="https://github.com/DmitryKazancev/how-to-learn"
+              sectionClass="portfolio__link"
               _blank>
-              Статичный сайт
-            </Link>
-            <Link address="https://github.com/DmitryKazancev/how-to-learn"
-              sectionClass="portfolio__link portfolio__link_type_follow"
-              _blank>
-              &#8599;
+              <span className="portfolio__link_type_text">Статичный сайт</span>
+              <span className="portfolio__link_type_follow">&#8599;</span>
             </Link>
           </li>
           <li className="portfolio__item">
             <Link address="https://dmitrykazancev.github.io/russian-travel/"
-              sectionClass="portfolio__link portfolio__link_type_text"
+              sectionClass="portfolio__link"
               _blank>
-              Адаптивный сайт
-            </Link>
-            <Link address="https://dmitrykazancev.github.io/russian-travel/"
-              sectionClass="portfolio__link portfolio__link_type_follow"
-              _blank>
-              &#8599;
+              <span className="portfolio__link_type_text">Адаптивный сайт</span>
+              <span className="portfolio__link_type_follow">&#8599;</span>
             </Link>
           </li>
           <li className="portfolio__item">
             <Link address="https://dmitrykazancev.github.io/react-mesto-auth/"
-              sectionClass="portfolio__link portfolio__link_type_text"
+              sectionClass="portfolio__link"
               _blank>
-              Одностраничное приложение
-            </Link>
-            <Link address="https://dmitrykazancev.github.io/react-mesto-auth/"
-              sectionClass="portfolio__link portfolio__link_type_follow"
-              _blank>
-              &#8599;
+              <span className="portfolio__link_type_text">Одностраничное приложение</span>
+              <span className="portfolio__link_type_follow">&#8599;</span>
             </Link>
           </li>
         </ul>

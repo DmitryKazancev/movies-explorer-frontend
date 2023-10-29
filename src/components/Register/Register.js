@@ -26,18 +26,18 @@ export default function Register() {
           buttonText="Зарегистрироваться">
           <InputField name="name"
             type="text"
-            placeholder="Имя"
+            placeholder=""
             minLength="2"
             maxLength="30">
             Имя
           </InputField>
           <InputField name="email"
             type="email"
-            placeholder="email" >
+            placeholder="" >
             E-mail
           </InputField>
           <InputField name="password"
-            placeholder="Пароль"
+            placeholder=""
             type="password">
             Пароль
           </InputField>

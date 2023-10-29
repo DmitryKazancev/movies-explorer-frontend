@@ -27,11 +27,11 @@ export default function Login() {
           buttonText="Войти">
           <InputField name="email"
             type="email"
-            placeholder="email" >
+            placeholder="" >
             E-mail
           </InputField>
           <InputField name="password"
-            placeholder="Пароль"
+            placeholder=""
             type="password">
             Пароль
           </InputField>

@@ -24,6 +24,10 @@
 
 
 @media (max-width: 720px) {
+  .navtab {
+    max-height: 66px;
+  }
+
   .navtab__list {
     padding: 25px 0;
     column-gap: 24px;
