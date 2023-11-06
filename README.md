@@ -6,4 +6,6 @@
 
 Используемый макет: light-3
 
+Адрес проекта: https://17sprint.nomoredomainsrocks.ru
+
 Адрес репозитория: https://github.com/DmitryKazancev/movies-explorer-frontend

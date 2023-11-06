@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import ButtonTemplate from "../ButtonTemplate/ButtonTemplate";
+import { AppContext } from "../../Context/AppContext.js";
+import { baseUrl } from "../../utils/constants";
 
 export default function MoviesCard({ movie }) {
 
-  const baseUrl = 'https://api.nomoreparties.co/';
+  const { isFavorit, saveMovie, removeMovie } = useContext(AppContext);
   const hours = Math.floor(movie.duration / 60);
   const minuts = movie.duration % 60;
   const location = useLocation();
-  const [isSaved, setIsSaved] = useState(false);
+  const url = location.pathname === '/movies' ? baseUrl + movie.image.url : movie.image;
+  const isSavedMovie = isFavorit(movie);
+  const saveMovieButtonClassName =
+    `${isSavedMovie && 'movies-card__save-button_active'}`;
 
-  function handleSaveClick() {
-    setIsSaved(!isSaved);
+  //Check favorite like in film
+  function handleFavoritClick() {
+    isSavedMovie ? removeMovie(movie) : saveMovie(movie);
+  }
+
+  //Delete film from favorites
+  function handleRemoveClick() {
+    removeMovie(movie);
   }
 
   return (
@@ -21,7 +32,7 @@ export default function MoviesCard({ movie }) {
         rel="noopener noreferrer"
         target="_blank">
         <img className="movies-card__image"
-          src={baseUrl + movie.image.url}
+          src={url}
           alt={movie.nameRU} />
         <div className="movies-card__footer">
           <div className="movies-card__group">
@@ -31,19 +42,16 @@ export default function MoviesCard({ movie }) {
         </div>
       </a>
       {location.pathname === "/movies" &&
-        <ButtonTemplate sectionClass={`movies-card__save-button
-              ${isSaved
-            ? 'movies-card__save-button_active'
-            : 'movies-card__save-button_off'}`}
-          type="button"
-          aria-label="сохранить"
-          handleClick={handleSaveClick}
+        <ButtonTemplate sectionClass={`movies-card__save-button ${saveMovieButtonClassName}`}
+          buttonType="button"
+          aria-label="Сохранить"
+          onClick={handleFavoritClick}
         ></ButtonTemplate>}
       {location.pathname === "/saved-movies" &&
         <ButtonTemplate sectionClass="movies-card__remove-button"
-          type="button"
+          buttonType="button"
           aria-label="удалить"
-          handleClick={handleSaveClick}
+          onClick={handleRemoveClick}
         ></ButtonTemplate>}
     </li>
   )
