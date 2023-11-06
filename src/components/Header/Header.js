@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import { LoggedInContext } from '../../Context/LoggedInContext.js';
+import { AppContext } from '../../Context/AppContext.js';
 import Navigation from '../Navigation/Navigation.js';
 import Auth from '../Auth/Auth.js';
 import Logo from '../Logo/Logo.js';
 
 export default function Header({ sectionClass }) {
 
-  const { isLoggedIn } = useContext(LoggedInContext);
+  const { isLoggedIn } = useContext(AppContext);
 
   return (
     <header className={`header ${sectionClass}`}>

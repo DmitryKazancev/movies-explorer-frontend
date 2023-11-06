@@ -1,21 +1,16 @@
 import Logo from '../Logo/Logo.js';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 import { useContext } from 'react';
 import { SignContext } from '../../Context/SignContext.js';
-import { LoggedInContext } from '../../Context/LoggedInContext.js';
 
-export default function SignWithForm({ formName, title, children, buttonText, sectionClass }) {
+export default function SignWithForm({ isLoading, errorMessage, formName, title, children, buttonText, buttonTextAction, sectionClass, onSubmit }) {
 
-  const navigate = useNavigate();
   const location = useLocation();
   const { isValid } = useContext(SignContext);
-  const { setLoggedIn } = useContext(LoggedInContext);
-
+ 
   function handleSubmit(e) {
-    console.log('submit');
     e.preventDefault();
-    setLoggedIn(true);
-    navigate('/movies', { replace: true });
+    onSubmit();
   }
 
   return (
@@ -27,14 +22,14 @@ export default function SignWithForm({ formName, title, children, buttonText, se
         onSubmit={handleSubmit}>
         {children}
         <span className={`sign-with-form__error ${sectionClass} 
-        ${false ? "sign-with-form__error_active" : ""}`}>
-          Текст ошибки
+        ${errorMessage ? "sign-with-form__error_active" : ""}`}>
+          {errorMessage}
         </span>
         <button type="submit"
           className={`button button_focus sign-with-form__submit 
           ${isValid ? '' : 'sign-with-form__submit_inactive'}`}
           disabled={!isValid}>
-          {buttonText}
+          {isLoading ? buttonTextAction : buttonText}
         </button>
       </form>
       {location.pathname === '/signin' && <span className="sign-with-form__question">
